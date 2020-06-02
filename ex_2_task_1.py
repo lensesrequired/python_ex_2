@@ -74,11 +74,17 @@ if __name__ == "__main__":
         "chris@letsgo!.org",
         "chris@megasavings.org",
         "tc@tank.com",
-        ]
+        "ann@safe.com",
+        "annaannaannaanna@safe.com",
+        "anna@marekfam.com",
+        "anna@ma.com",
+        "@.",
+        "x@some.com"
+    ]
     # validate each email from the list
     for e in email_list:
-        r, s = is_valid_email_address(e) 
-        if r == None:
-            print(e, s) # OK
+        r, s = is_valid_email_address(e)
+        if r is None:
+            print(e, s)  # OK
         else:
             print(f"{e} - error: {s}, error code: {r}")  # Error

@@ -1,0 +1,17 @@
+charding@iastate.edu Seems legit
+chris.edu - error: Exactly one @ and one . allowed., error code: 1
+chris@edu - error: Exactly one @ and one . allowed., error code: 1
+@bla.edu - error: There must be 3-16 alpha-numeric characters before the '@', error code: 3
+throatwobblermangrove@mpfc.org - error: There must be 3-16 alpha-numeric characters before the '@', error code: 3
+chris@X.com - error: There must be 2-8 alpha-numeric characters between the '@' and the '.', error code: 4
+chris.harding@iastate.edu - error: Exactly one @ and one . allowed., error code: 1
+chris@pymart.biz - error: 'com', 'edu', 'org', or 'gov' must follow the '.', error code: 5
+chris@letsgo!.org - error: There must be 2-8 alpha-numeric characters between the '@' and the '.', error code: 4
+chris@megasavings.org - error: There must be 2-8 alpha-numeric characters between the '@' and the '.', error code: 4
+tc@tank.com - error: There must be 3-16 alpha-numeric characters before the '@', error code: 3
+ann@safe.com Seems legit
+annaannaannaanna@safe.com Seems legit
+anna@marekfam.com Seems legit
+anna@ma.com Seems legit
+@. - error: There must be 3-16 alpha-numeric characters before the '@', error code: 3
+x@some.com - error: There must be 3-16 alpha-numeric characters before the '@', error code: 3
