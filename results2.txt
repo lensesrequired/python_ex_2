@@ -1,0 +1,25 @@
+/usr/local/bin/python3.7 /Users/anna/Git/python_ex_2/ex_2_task_2.py
+Email Address: amarek@iastate.edu
+valid email amarek@iastate.edu
+
+/usr/local/bin/python3.7 /Users/anna/Git/python_ex_2/ex_2_task_2.py
+Email Address: .@@
+.@@ is invalid! Exactly one @ and one . allowed.
+Try again, 2 attempts left.
+Email Address: areallyreallyreallyreallylong@email.com
+areallyreallyreallyreallylong@email.com is invalid! There must be 3-16 alpha-numeric characters before the '@'
+Try again, 1 attempts left.
+Email Address: stillabad@email.tv
+stilabad@email.tv is invalid! 'com', 'edu', 'org', or 'gov' must follow the '.'
+No attempts left.
+invalid email stillabad@email.tv
+
+/usr/local/bin/python3.7 /Users/anna/Git/python_ex_2/ex_2_task_2.py
+Email Address: badbadbad
+badbadbad is invalid! Exactly one @ and one . allowed.
+Try again, 2 attempts left.
+Email Address: stilbad@.com
+stilbad@.com is invalid! There must be 2-8 alpha-numeric characters between the '@' and the '.'
+Try again, 1 attempts left.
+Email Address: butthisis@good.com
+valid email butthisis@good.com
