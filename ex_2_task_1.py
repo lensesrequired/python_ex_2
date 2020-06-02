@@ -34,24 +34,40 @@
 # As proof, please manually copy/paste the console output for one run into a file called
 # results1.txt
 
+
 def is_valid_email_address(s):
-    
-    # your code here
+    if (s.count(".") != 1 or s.count("@") != 1):
+        # check for the only symbols allowed and that there's the correct number of them
+        return ("1", "Exactly one @ and one . allowed.")
 
-    
+    atIndex = s.find("@")  # grab the indices of those symbols
+    perIndex = s.find(".")
+    if (atIndex > perIndex):  # if the @ is before the ., err
+        return ("2", "The '@' must come before the '.'.")
 
+    if (atIndex < 3 or atIndex > 16 or not s[0:atIndex].isalnum()):  # validate the part before the @
+        return ("3", "There must be 3-16 alpha-numeric characters before the '@'")
 
-    
+    if (perIndex - atIndex <= 2 or perIndex - atIndex > 9 or not s[atIndex + 1:perIndex].isalnum()):
+        # validate the part betwee the @ and the .
+        return ("4", "There must be 2-8 alpha-numeric characters between the '@' and the '.'")
+
+    if ((s.split(".")[1]) not in ["com", "edu", "org", "gov"]):  # validate the tld
+        return ("5", "'com', 'edu', 'org', or 'gov' must follow the '.'")
+
+    return None, "Seems legit"  # if no errs are thrown, report good email
+
 
 # This if ensures that the following is NOT run if this file was imported as a module (which we'll do next!)
 if __name__ == "__main__":
 
     # tests, including edge cases (incomplete? add more!)
-    email_list = ["charding@iastate.edu", 
+    email_list = [
+        "charding@iastate.edu",
         "chris.edu",
         "chris@edu",
         "@bla.edu",
-        "throatwobblermangrove@mpfc.org", 
+        "throatwobblermangrove@mpfc.org",
         "chris@X.com",
         "chris.harding@iastate.edu",
         "chris@pymart.biz",
@@ -65,6 +81,4 @@ if __name__ == "__main__":
         if r == None:
             print(e, s) # OK
         else:
-            print(f"{e} - error: {s}, error code: {r}") # Error
-
-        
+            print(f"{e} - error: {s}, error code: {r}")  # Error
