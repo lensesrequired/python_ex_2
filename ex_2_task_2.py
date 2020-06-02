@@ -27,35 +27,29 @@
 # Again, manually copy/paste the console output in a text file (results2.txt)
 
 
-
 # import your function from the previous .py file as a module (you can abbreviate it)
 # use ex_2_task_2 here instead once your function works!
-from ex_2_task_1_solution import is_valid_email_address as is_valid 
+from ex_2_task_1 import is_valid_email_address as is_valid
 
 gave_up = False
 attempts_left = 3
 
 # your code - start
-while True:
-    email = input("email address?")
-    r, err_str = is_valid(email)
+email = input("Email Address: ")  # initialize email
+err_code, err_str = is_valid(email)  # check validity
+while err_code is not None:  # try until there's no error
+    print(email, "is invalid!", err_str)  #
 
-    if r == None:
-        print(email, "is valid!")
-        break
-    
-    # error
+    # use an attempt
     attempts_left -= 1
-
-    # no attempts left - bail out 
-    if attempts_left == 0:
+    if attempts_left == 0:  # if there's no attempts left, give up and break
         gave_up = True
-        print("No attempts left, bailing out")
+        print("No attempts left.")
         break
 
-    print(email, "is invalid!")
-    print("Reason:", err_str)
-    print(f"Try again, {attempts_left} attempts left")
+    print(f"Try again, {attempts_left} attempts left.")
+    email = input("Email Address: ")
+    err_code, err_str = is_valid(email)  # check validity
 
 # your code - end
 if not gave_up:
