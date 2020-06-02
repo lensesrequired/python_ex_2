@@ -36,6 +36,11 @@
 
 
 def is_valid_email_address(s):
+    """
+    validates a string as an email or returns errors
+    :param s: some string
+    :return: (err code, message)
+    """
     if (s.count(".") != 1 or s.count("@") != 1):
         # check for the only symbols allowed and that there's the correct number of them
         return ("1", "Exactly one @ and one . allowed.")
